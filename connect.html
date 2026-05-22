@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect &mdash; The Signal Institute</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/logo-indigo.png">
+</head>
+<body data-page="connect">
+
+  <nav id="mainNav">
+    <div class="nav-logo">
+      <a href="index.html"><img src="" alt="Signal Institute" id="navLogoImg"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" data-p="home">Home</a></li>
+      <li><a href="about.html" data-p="about">About</a></li>
+      <li><a href="offerings.html" data-p="offerings">Offerings</a></li>
+      <li><a href="resources.html" data-p="resources">Resources</a></li>
+      <li><a href="connect.html" class="nav-cta" data-p="connect">Connect</a></li>
+    </ul>
+    <div class="hamburger" onclick="openMob()"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu" id="mobMenu">
+    <button class="mobile-close" onclick="closeMob()">&#x2715;</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="offerings.html">Offerings</a>
+    <a href="resources.html">Resources</a>
+    <a href="connect.html">Connect</a>
+  </div>
+
+<div class="connect-wrap">
+    <div class="connect-left">
+      <div class="connect-left-inner">
+        <p class="eyebrow" style="color:var(--sage)">Connect</p>
+        <h1 class="connect-h1">Ready to begin?</h1>
+        <p class="connect-lead">Signal selects only those ready for radical growth. Tell us about yourself. We'll follow up personally to explore which offering is the right fit.</p>
+        <div class="contact-opts">
+          <div class="contact-opt">
+            <div>
+              <div class="co-label">Email</div>
+              <div class="co-val">info@thesignalinstitute.com</div>
+            </div>
+          </div>
+          <div class="contact-opt">
+            <div>
+              <div class="co-label">Location</div>
+              <div class="co-val">Braveheart Ranch · Santa Cruz Mountains, California</div>
+            </div>
+          </div>
+          <div class="contact-opt">
+            <div>
+              <div class="co-label">Podcast &amp; Speaking</div>
+              <div class="co-val">Use the form and select your request type</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="connect-right">
+      <div class="cf">
+        <h2>Get in touch</h2>
+        <p class="cf-sub">We respond to every inquiry personally.</p>
+        <label class="fl">Full Name *</label><input type="text" class="fi" placeholder="Your full name">
+        <label class="fl">Email Address *</label><input type="email" class="fi" placeholder="you@example.com">
+        <label class="fl">Title &amp; Organization</label><input type="text" class="fi" placeholder="CEO, Acme Inc.">
+        <label class="fl">I'm interested in</label>
+        <select class="fs">
+          <option value="">Select an offering...</option>
+          <option>Signal Forums</option>
+          <option>Intensives</option>
+          <option>1:1 Coaching</option>
+          <option>Group &amp; Team Facilitation</option>
+          <option>Speaking Request</option>
+          <option>Podcast Interview Request</option>
+          <option>General Inquiry</option>
+        </select>
+        <label class="fl">Message</label>
+        <textarea class="ft" style="min-height:130px" placeholder="Tell us about yourself and what you're looking for..."></textarea>
+        <div style="display:flex; align-items:flex-start; gap:0.75rem; margin-bottom:1.5rem">
+          <input type="checkbox" id="nl" style="margin-top:0.2rem; accent-color:var(--teal)">
+          <label for="nl" style="font-size:0.82rem; font-weight:300; color:rgba(26,26,46,0.6); line-height:1.5; cursor:pointer">Subscribe to our monthly newsletter — be the first to know what's new at Signal Institute.</label>
+        </div>
+        <button class="btn-primary" style="width:100%; padding:1rem">Send Message</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="" id="footerLogoImg" alt="Signal Institute">
+          <p>A rigorous training ground for global changemakers ready to trade certainty for aliveness &mdash; and design the future from a place of profound presence.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="offerings.html">Offerings</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="connect.html">Connect</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Offerings</h4>
+          <ul>
+            <li><a href="offerings.html">Signal Forums</a></li>
+            <li><a href="offerings.html">Intensives</a></li>
+            <li><a href="offerings.html">1:1 Coaching</a></li>
+            <li><a href="offerings.html">Group &amp; Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+            <li><a href="#" target="_blank">Substack</a></li>
+            <li><a href="mailto:info@thesignalinstitute.com">Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2026 The Signal Institute. All rights reserved.</div>
+        <div class="footer-tagline">Where disrupters learn to listen.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

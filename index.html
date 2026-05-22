@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where Disrupters Learn to Listen &mdash; The Signal Institute</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/logo-indigo.png">
+</head>
+<body data-page="home">
+
+  <nav id="mainNav">
+    <div class="nav-logo">
+      <a href="index.html"><img src="" alt="Signal Institute" id="navLogoImg"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" data-p="home">Home</a></li>
+      <li><a href="about.html" data-p="about">About</a></li>
+      <li><a href="offerings.html" data-p="offerings">Offerings</a></li>
+      <li><a href="resources.html" data-p="resources">Resources</a></li>
+      <li><a href="connect.html" class="nav-cta" data-p="connect">Connect</a></li>
+    </ul>
+    <div class="hamburger" onclick="openMob()"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu" id="mobMenu">
+    <button class="mobile-close" onclick="closeMob()">&#x2715;</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="offerings.html">Offerings</a>
+    <a href="resources.html">Resources</a>
+    <a href="connect.html">Connect</a>
+  </div>
+
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-noise"></div>
+    <div class="hero-content">
+      <div>
+        <p class="hero-eyebrow">The Signal Institute</p>
+        <h1 class="hero-headline">Where disrupters<br><em>learn to listen.</em></h1>
+        <p class="hero-sub">A rigorous training ground for global changemakers ready to trade certainty for aliveness — and design the future from a place of profound presence.</p>
+        <div class="hero-btns">
+          <a class="btn-primary" href="offerings.html">Explore Offerings</a>
+          <a class="btn-ghost" href="connect.html">Apply Now</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <svg class="wave-svg" viewBox="0 0 460 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="wg1" x1="0" y1="0" x2="460" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#2C6671" stop-opacity="0.15"/>
+              <stop offset="50%" stop-color="#FCD757" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#2C6671" stop-opacity="0.15"/>
+            </linearGradient>
+            <linearGradient id="wg2" x1="0" y1="0" x2="460" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#721817" stop-opacity="0.1"/>
+              <stop offset="50%" stop-color="#A9B18F" stop-opacity="0.7"/>
+              <stop offset="100%" stop-color="#721817" stop-opacity="0.1"/>
+            </linearGradient>
+            <linearGradient id="wg3" x1="0" y1="0" x2="460" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#223554" stop-opacity="0.1"/>
+              <stop offset="50%" stop-color="#C3703D" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="#223554" stop-opacity="0.1"/>
+            </linearGradient>
+          </defs>
+          <path d="M0,150 C38,90 76,210 114,150 S190,90 230,150 S306,210 344,150 S420,90 460,150" stroke="url(#wg1)" stroke-width="1.5" fill="none">
+            <animate attributeName="d" values="M0,150 C38,90 76,210 114,150 S190,90 230,150 S306,210 344,150 S420,90 460,150;M0,150 C38,210 76,90 114,150 S190,210 230,150 S306,90 344,150 S420,210 460,150;M0,150 C38,90 76,210 114,150 S190,90 230,150 S306,210 344,150 S420,90 460,150" dur="7s" repeatCount="indefinite"/>
+          </path>
+          <path d="M0,150 C28,70 86,230 144,150 S260,70 318,150 S404,230 460,150" stroke="url(#wg2)" stroke-width="1" fill="none" opacity="0.75">
+            <animate attributeName="d" values="M0,150 C28,70 86,230 144,150 S260,70 318,150 S404,230 460,150;M0,150 C28,230 86,70 144,150 S260,230 318,150 S404,70 460,150;M0,150 C28,70 86,230 144,150 S260,70 318,150 S404,230 460,150" dur="9s" repeatCount="indefinite"/>
+          </path>
+          <path d="M0,150 C58,50 116,250 172,150 S288,50 344,150 S402,250 460,150" stroke="url(#wg3)" stroke-width="0.75" fill="none" opacity="0.5">
+            <animate attributeName="d" values="M0,150 C58,50 116,250 172,150 S288,50 344,150 S402,250 460,150;M0,150 C58,250 116,50 172,150 S288,250 344,150 S402,50 460,150;M0,150 C58,50 116,250 172,150 S288,50 344,150 S402,250 460,150" dur="11s" repeatCount="indefinite"/>
+          </path>
+          <circle cx="230" cy="150" r="3.5" fill="#FCD757" opacity="0.9">
+            <animate attributeName="opacity" values="0.9;0.3;0.9" dur="3.5s" repeatCount="indefinite"/>
+            <animateMotion path="M0,150 C38,90 76,210 114,150 S190,90 230,150 S306,210 344,150 S420,90 460,150" dur="7s" repeatCount="indefinite" rotate="auto"/>
+          </circle>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS SIGNAL -->
+  <section style="background:var(--warm-white); padding: 7rem 0;">
+    <div class="section what-grid" style="padding-top:0; padding-bottom:0;">
+      <div class="reveal">
+        <p class="eyebrow">What is Signal</p>
+        <h2 class="h2">A training ground for influential visionaries and <em>changemakers.</em></h2>
+        <p class="body-lg">Signal Institute takes committed leaders deeper and faster into facing and transforming the patterns that hold them back. We help you hear the subtle signals that reveal how to be and what to do — but only if you're willing to be truly challenged.</p>
+        <p class="body-lg" style="margin-top:1rem">When you do this work, something fundamental shifts. Your relationship to yourself, to others, to power, and to uncertainty changes forever.</p>
+        <p style="margin-top:2rem; font-family:var(--font-display); font-size:1.05rem; font-style:italic; color:var(--wine)">This is not a training for the curious.</p>
+      </div>
+      <div>
+        <ul class="principles">
+          <li class="principle reveal">
+            <span class="p-num">01</span>
+            <div><div class="p-title">Take Responsibility</div><div class="p-body">Everything in your life happens by you, not to you. Own your experience and watch your impact grow.</div></div>
+          </li>
+          <li class="principle reveal">
+            <span class="p-num">02</span>
+            <div><div class="p-title">Live in Integrity</div><div class="p-body">Stop leaking energy through half-truths and suppressed emotions. Align your life with a Whole Body Yes.</div></div>
+          </li>
+          <li class="principle reveal">
+            <span class="p-num">03</span>
+            <div><div class="p-title">Love Yourself</div><div class="p-body">See the truth of who you are beneath your stories. Surrender to the profound relaxation of self-acceptance.</div></div>
+          </li>
+          <li class="principle reveal">
+            <span class="p-num">04</span>
+            <div><div class="p-title">Relax into the Unknown</div><div class="p-body">Release the illusion of control. Trust the signals from your heart, body, and intuition.</div></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATTRIBUTES BAND -->
+  <div class="attr-band reveal">
+    <div class="attr-inner">
+      <div class="attr"><div class="attr-word">Fiercely Loving</div><div class="attr-desc">We bring heat.<br>We hold pressure.</div></div>
+      <div class="attr"><div class="attr-word">Provocative</div><div class="attr-desc">We dislodge assumptions and open new frames.</div></div>
+      <div class="attr"><div class="attr-word">Playful</div><div class="attr-desc">Play is how we learn fastest.</div></div>
+      <div class="attr"><div class="attr-word">Grounded</div><div class="attr-desc">Regulation is the gateway to revolution.</div></div>
+      <div class="attr"><div class="attr-word">Intimate</div><div class="attr-desc">Real connection that feels like home.</div></div>
+    </div>
+  </div>
+
+  <!-- OFFERINGS PREVIEW -->
+  <section style="background:var(--warm-white); padding:7rem 0;">
+    <div class="section" style="padding-top:0; padding-bottom:0;">
+      <div class="reveal" style="margin-bottom:3rem">
+        <p class="eyebrow">How We Work With You</p>
+        <h2 class="h2">Choose your <em>disruption.</em></h2>
+      </div>
+      <div class="off-grid">
+        <div class="off-card reveal" href="offerings.html#forums">
+          <div class="off-tag">Forums</div>
+          <div class="off-name">Signal Forums</div>
+          <div class="off-tagline">Intense. Provocative. Supportive. Life-changing.</div>
+          <div class="off-desc">A group of 12 leaders who come together five times a year for retreats. Deepen in consciousness and become a more effective changemaker. Nothing is off-limits in service of truth.</div>
+          <div class="off-meta">
+            <div class="off-meta-item"><strong>Format:</strong> 5 Retreats/Year</div>
+            <div class="off-meta-item"><strong>Cost:</strong> $40,000</div>
+            <div class="off-meta-item"><strong>Group:</strong> 12 Members</div>
+          </div>
+        </div>
+        <div class="off-card reveal" href="offerings.html#intensives">
+          <div class="off-tag">Intensives</div>
+          <div class="off-name">Intensives</div>
+          <div class="off-tagline">Stop leaking energy. Hear the signals.</div>
+          <div class="off-desc">3–4 day trainings, device-free. For leaders, coaches, or couples. Interrupt limitations and liberate possibilities. You'll leave with new awareness, skills, and community.</div>
+          <div class="off-meta">
+            <div class="off-meta-item"><strong>Format:</strong> 3–4 Days</div>
+            <div class="off-meta-item"><strong>Cost:</strong> From $2,500</div>
+            <div class="off-meta-item"><strong>Group:</strong> 10–20 People</div>
+          </div>
+        </div>
+        <div class="off-card reveal" href="offerings.html#coaching">
+          <div class="off-tag">1:1 Coaching</div>
+          <div class="off-name">Individual Coaching</div>
+          <div class="off-tagline">Direct. Loving. Disruptive. Transformational.</div>
+          <div class="off-desc">If you're navigating a meaningful disruption, we offer coaching to support the transition with as much awareness as possible. By invitation.</div>
+          <div class="off-meta">
+            <div class="off-meta-item"><strong>Format:</strong> Individual</div>
+            <div class="off-meta-item"><strong>Apply:</strong> By Invitation</div>
+          </div>
+        </div>
+        <div class="off-card reveal" href="offerings.html#teams">
+          <div class="off-tag">Group & Team</div>
+          <div class="off-name">Group & Team Facilitation</div>
+          <div class="off-tagline">Teams, Family Offices, YPO Forums</div>
+          <div class="off-desc">Custom events curated for your specific group. Signal brings heat, pressure, and love to loosen the grip of ego-identity for your entire organization.</div>
+          <div class="off-meta">
+            <div class="off-meta-item"><strong>Format:</strong> Custom</div>
+            <div class="off-meta-item"><strong>Apply:</strong> Contact Us</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <div class="founder-band">
+    <div class="founder-inner">
+      <div class="reveal">
+        <p class="founder-eyebrow">Founder</p>
+        <h2 class="founder-name">Diana<br>Chapman</h2>
+        <p class="founder-bio">Diana Chapman is one of the most sought-after advisors and defining voices in the global conscious leadership movement. She founded Signal Institute after exiting the Conscious Leadership Group — which she co-founded — to focus on supporting disruptive visionaries as they design the future.</p>
+        <p class="founder-bio">Her work lives at the intersection of radical honesty, somatic intelligence, and the courage to surrender what you think you know.</p>
+        <div class="founder-creds">
+          <div class="cred">Co-author of <em>The 15 Commitments of Conscious Leadership</em> — the #1 bestselling book on conscious leadership worldwide</div>
+          <div class="cred">Upcoming: <em>No Drama Teams</em> (Portfolio Publishing, 2027)</div>
+          <div class="cred">Co-teaches Capital Formation at Stanford University</div>
+          <div class="cred">Global YPO Facilitator &amp; Kauffman Fellows Trainer</div>
+          <div class="cred">Advisor to top AI industry leaders</div>
+        </div>
+        <div style="margin-top:2.5rem">
+          <a class="btn-ghost" href="about.html">Meet the Team →</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <img class="founder-img" src="https://images.squarespace-cdn.com/content/v1/66e83507fef8fb68125b5bd1/bb43b8e9-85c7-4369-97d2-833435474041/Diana+Seated+Navy+Blazer+Bare+Feet+1.jpg" alt="Diana Chapman" onerror="this.parentElement.innerHTML='<div class=founder-img-placeholder><span>DC</span></div>'">
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="testimonials">
+    <div class="test-inner">
+      <p class="eyebrow" style="color:var(--indigo)">What Leaders Say</p>
+      <div id="testCarousel">
+        <div class="testimonial active">
+          <p class="test-quote">"During the persona party at our retreat I experienced a profound shift — it turned the hardest thing I've ever dealt with in my adult life into an incredible learning opportunity. I now know I can choose to look at every situation in life as an opportunity rather than a struggle."</p>
+          <div class="test-author">Joe Greenstein</div>
+          <div class="test-role">Co-Founder, InnerSpace · Former CEO, Flixster and Rotten Tomatoes</div>
+        </div>
+        <div class="testimonial">
+          <p class="test-quote">"I now experience a higher degree of trust, despite the outcomes of the day to day. It's liberated me to apply myself without unhelpful anxiety."</p>
+          <div class="test-author">Premal Shah</div>
+          <div class="test-role">President, kiva.org</div>
+        </div>
+        <div class="testimonial">
+          <p class="test-quote">"This was the reset our relationship longed for. The work had us learning about each other and ourselves in a way we have not been able to unlock on our own."</p>
+          <div class="test-author">Couples Intensive Graduate</div>
+          <div class="test-role">Signal Institute Alumni</div>
+        </div>
+        <div class="testimonial">
+          <p class="test-quote">"Broke through patterns that had been 26 years old in our couplehood."</p>
+          <div class="test-author">Una Basak</div>
+          <div class="test-role">Couples Intensive Graduate</div>
+        </div>
+      </div>
+      <div class="test-nav" id="testNav">
+        <button class="t-dot active" onclick="setT(0)"></button>
+        <button class="t-dot" onclick="setT(1)"></button>
+        <button class="t-dot" onclick="setT(2)"></button>
+        <button class="t-dot" onclick="setT(3)"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter-strip">
+    <p class="eyebrow" style="text-align:center">Stay Connected</p>
+    <h2>Subscribe to our monthly newsletter</h2>
+    <p>Be the first to know what's new at Signal Institute.</p>
+    <div class="email-row">
+      <input type="email" placeholder="Your email address">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="" id="footerLogoImg" alt="Signal Institute">
+          <p>A rigorous training ground for global changemakers ready to trade certainty for aliveness &mdash; and design the future from a place of profound presence.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="offerings.html">Offerings</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="connect.html">Connect</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Offerings</h4>
+          <ul>
+            <li><a href="offerings.html">Signal Forums</a></li>
+            <li><a href="offerings.html">Intensives</a></li>
+            <li><a href="offerings.html">1:1 Coaching</a></li>
+            <li><a href="offerings.html">Group &amp; Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+            <li><a href="#" target="_blank">Substack</a></li>
+            <li><a href="mailto:info@thesignalinstitute.com">Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2026 The Signal Institute. All rights reserved.</div>
+        <div class="footer-tagline">Where disrupters learn to listen.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
