@@ -1,8 +1,8 @@
 // ─── Logo swap ────────────────────────────────────────────────────────────
 // On dark pages (home), use logo-mustard until scrolled; then logo-sage.
 // On light pages, use logo-sage always.
-const LOGO_DARK  = 'assets/images/logo-mustard.png'; // visible on dark bg
-const LOGO_LIGHT = 'assets/images/logo-sage.png';    // visible on dark + light bg
+const LOGO_DARK  = 'assets/images/logo-sage.png';   // visible on dark bg (nav before scroll)
+const LOGO_LIGHT = 'assets/images/logo-indigo.png'; // visible on light bg (nav after scroll)
 
 const isDarkPage = document.body.dataset.page === 'home';
 

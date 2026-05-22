@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diana Chapman &mdash; The Signal Institute</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/png" href="../assets/images/logo-indigo.png">
+  <style>
+    /* ── Team page specific styles ── */
+    .team-hero {
+      background: var(--warm-white);
+      padding: 8rem 3rem 0;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .team-hero-inner {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 5rem;
+      align-items: start;
+      padding-bottom: 5rem;
+      border-bottom: 1px solid rgba(26,26,46,0.09);
+    }
+    .team-portrait {
+      position: sticky;
+      top: 6rem;
+    }
+    .team-portrait img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 3px;
+      display: block;
+    }
+    .team-portrait-ph {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, rgba(44,102,113,0.2), rgba(114,24,23,0.12));
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .team-portrait-ph span {
+      font-family: var(--font-display);
+      font-size: 5rem;
+      font-weight: 300;
+      color: rgba(26,26,46,0.15);
+    }
+    .team-bio {}
+    .team-role-tag {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.75rem;
+    }
+    .team-bio h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+      font-weight: 400;
+      line-height: 1.05;
+      color: var(--navy);
+      margin-bottom: 2rem;
+    }
+    .team-bio-text p {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: rgba(26,26,46,0.72);
+      margin-bottom: 1.1rem;
+    }
+    .team-bio-text p:last-child { margin-bottom: 0; }
+    .highlights-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 3rem;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .highlights-label {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1.5rem;
+    }
+    .highlights-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.15;
+    }
+    .highlights-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
+    .highlights-list li {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(26,26,46,0.7);
+      padding: 0.85rem 0;
+      border-bottom: 1px solid rgba(26,26,46,0.07);
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+    }
+    .highlights-list li::before {
+      content: '◆';
+      color: var(--teal);
+      font-size: 0.55rem;
+      flex-shrink: 0;
+      margin-top: 0.45rem;
+    }
+    .testimonials-section {
+      background: var(--navy);
+      padding: 6rem 3rem;
+    }
+    .testimonials-section .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .testimonials-section .section-label {
+      color: var(--sage);
+    }
+    .testimonials-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 400;
+      color: var(--warm-white);
+      margin-bottom: 3rem;
+      line-height: 1.1;
+    }
+    .testimonials-section h2 em { font-style: italic; color: var(--mustard); }
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .test-card {
+      background: rgba(245,242,236,0.04);
+      border: 1px solid rgba(245,242,236,0.07);
+      border-radius: 3px;
+      padding: 2rem;
+    }
+    .test-card-quote {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.65;
+      color: rgba(245,242,236,0.8);
+      margin-bottom: 1.5rem;
+    }
+    .test-card-quote::before { content: '\201C'; }
+    .test-card-quote::after  { content: '\201D'; }
+    .test-card-name {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--warm-white);
+      margin-bottom: 0.2rem;
+    }
+    .test-card-role {
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: rgba(245,242,236,0.4);
+      line-height: 1.4;
+    }
+    .cta-band {
+      background: var(--wine);
+      padding: 5rem 3rem;
+      text-align: center;
+    }
+    .cta-band h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 400;
+      color: var(--warm-white);
+      margin-bottom: 0.75rem;
+      line-height: 1.15;
+    }
+    .cta-band p {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: rgba(245,242,236,0.65);
+      margin-bottom: 2rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.75;
+    }
+    .breadcrumb {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 6.5rem 3rem 0;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: rgba(26,26,46,0.4);
+    }
+    .breadcrumb a {
+      color: rgba(26,26,46,0.4);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { color: var(--wine); }
+    .breadcrumb span { margin: 0 0.5rem; }
+    @media (max-width: 900px) {
+      .team-hero-inner, .highlights-section { grid-template-columns: 1fr; gap: 2.5rem; }
+      .team-portrait { position: static; max-width: 260px; }
+      .test-grid { grid-template-columns: 1fr; }
+      .team-hero, .highlights-section { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .testimonials-section { padding: 4rem 1.5rem; }
+      .breadcrumb { padding-left: 1.5rem; padding-right: 1.5rem; }
+    }
+  </style>
+</head>
+<body data-page="about">
+
+  <nav id="mainNav">
+    <div class="nav-logo">
+      <a href="../about.html"><img src="" alt="Signal Institute" id="navLogoImg"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html" data-p="home">Home</a></li>
+      <li><a href="../about.html" data-p="about">About</a></li>
+      <li><a href="../offerings.html" data-p="offerings">Offerings</a></li>
+      <li><a href="../resources.html" data-p="resources">Resources</a></li>
+      <li><a href="../connect.html" class="nav-cta" data-p="connect">Connect</a></li>
+    </ul>
+    <div class="hamburger" onclick="openMob()"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu" id="mobMenu">
+    <button class="mobile-close" onclick="closeMob()">&#x2715;</button>
+    <a href="../index.html">Home</a>
+    <a href="../about.html">About</a>
+    <a href="../offerings.html">Offerings</a>
+    <a href="../resources.html">Resources</a>
+    <a href="../connect.html">Connect</a>
+  </div>
+
+
+  <div class="breadcrumb reveal">
+    <a href="../about.html">About</a>
+    <span>/</span>
+    Diana Chapman
+  </div>
+
+  <div class="team-hero">
+    <div class="team-hero-inner">
+      <div class="team-portrait reveal">
+        <img src="https://images.squarespace-cdn.com/content/v1/66e83507fef8fb68125b5bd1/bb43b8e9-85c7-4369-97d2-833435474041/Diana+Seated+Navy+Blazer+Bare+Feet+1.jpg"
+             alt="Diana Chapman"
+             onerror="this.outerHTML='<div class=team-portrait-ph><span>DC</span></div>'">
+      </div>
+      <div class="team-bio reveal">
+        <div class="team-role-tag">Founder</div>
+        <h1>Diana Chapman</h1>
+        <div class="team-bio-text">
+          <p>Diana Chapman is one of the most sought-after advisors and defining voices in the global conscious leadership movement. She has advised thousands of CEOs and many of their executive teams, traveled the globe as a YPO facilitator, and trained many of the top conscious leadership coaches in the industry.</p>
+          <p>She founded Signal Institute after exiting Conscious Leadership Group, which she co-founded, to focus on supporting disruptive visionaries as they design the future.</p>
+          <p>Her first book, <em>The 15 Commitments of Conscious Leadership</em>, is the top-selling book on conscious leadership worldwide. Her next book, <em>No Drama Teams</em>, is forthcoming (Portfolio Publishing, 2027).</p>
+          <p>As a passionate educator, Diana co-teaches Capital Formation at Stanford University, where she helps students understand that consciousness is capital. She also serves as a regular instructor for The Kauffman Fellows. In response to a call to focus on the human consequences of AI, Diana advises many of the industry's top leaders.</p>
+          <p>She lives in the Santa Cruz Mountains of California with her husband at Braveheart Ranch. She lives close to the land, growing food and designing environments that restore people to themselves.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlights-section">
+    <div class="reveal">
+      <div class="highlights-label">Career Highlights</div>
+      <h2 class="highlights-title">Track record &amp; credentials</h2>
+    </div>
+    <div class="reveal">
+      <ul class="highlights-list">
+        <li>Founder, The Signal Institute (2025)</li>
+        <li>Co-Founder, Conscious Leadership Group</li>
+        <li>Co-author, <em>The 15 Commitments of Conscious Leadership</em> &mdash; the top-selling book on conscious leadership worldwide</li>
+        <li>Forthcoming: <em>No Drama Teams</em> (Portfolio Publishing, 2027)</li>
+        <li>Co-teaches Capital Formation at Stanford University</li>
+        <li>Regular instructor, The Kauffman Fellows</li>
+        <li>Global YPO Forum Facilitator</li>
+        <li>Advisor to top AI industry leaders on human consequences of AI</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="testimonials-section">
+    <div class="section-inner">
+      <div class="eyebrow section-label reveal">What leaders say</div>
+      <h2 class="reveal">Words from those who&#8217;ve<br><em>done the work.</em></h2>
+      <div class="test-grid">
+        <div class="test-card reveal">
+          <div class="test-card-quote">What sets Diana apart is her ability to help you not just solve immediate challenges, but level up your capabilities for the future. The impact of our work together continues to compound over time.</div>
+          <div class="test-card-name">Mike Krieger</div>
+          <div class="test-card-role">CPO Anthropic &middot; Former Co-Founder, Instagram</div>
+        </div>
+        <div class="test-card reveal">
+          <div class="test-card-quote">Diana is one of the best, if not the best, life teachers I have ever met. She has had a dramatic impact on the way I see the world, opening my eyes to critical metapatterns.</div>
+          <div class="test-card-name">Justin Rosenstein</div>
+          <div class="test-card-role">Co-Founder of Asana &amp; One Project</div>
+        </div>
+        <div class="test-card reveal">
+          <div class="test-card-quote">Diana has changed our business and my life. She is creating a new model for leadership that is both pioneering and practical. I would not have found the right path if it weren&rsquo;t for Diana.</div>
+          <div class="test-card-name">Matt Pohlson</div>
+          <div class="test-card-role">Founder and CEO, Omaze</div>
+        </div>
+        <div class="test-card reveal">
+          <div class="test-card-quote">Working with Diana was nothing short of transformational. She didn&rsquo;t just help me reach goals&mdash;she helped me rewrite them, unlocking a sense of clarity, courage, and joy I didn&rsquo;t know was possible.</div>
+          <div class="test-card-name">Kara Nortman</div>
+          <div class="test-card-role">Managing Partner, Monarch Collective LLC</div>
+        </div>
+        <div class="test-card reveal">
+          <div class="test-card-quote">She goes straight for the jugular, no matter how uncomfortable it is, and is unflinching in her quest for the change you need. I&rsquo;ve recommended dozens of coaches to CEOs, but only picked one for myself &mdash; Diana.</div>
+          <div class="test-card-name">Anthony Lee</div>
+          <div class="test-card-role">Managing Director, Altos Ventures</div>
+        </div>
+        <div class="test-card reveal">
+          <div class="test-card-quote">Diana is not for the faint of heart. Working with Diana for the last 8 years has been the best investment I&rsquo;ve made in my professional and personal life. Diana is a once-in-a-generation coach.</div>
+          <div class="test-card-name">Aike Ho</div>
+          <div class="test-card-role">Partner, Acme Capital</div>
+        </div>
+        <div class="test-card reveal">
+          <div class="test-card-quote">Diana challenged me to see and reclaim parts of myself I had suppressed while navigating a hyper-masculine world. I feel more alive and connected than I have in years.</div>
+          <div class="test-card-name">Trae Vassallo</div>
+          <div class="test-card-role">Executive at Apple &middot; Former investor, founder and engineer</div>
+        </div>
+        <div class="test-card reveal">
+          <div class="test-card-quote">Diana has taught me not to settle for the leader that I am today. She has encouraged me to be curious about the ways I can tap into my better self to lead even more effectively with skill and grace.</div>
+          <div class="test-card-name">Mellody Hobson</div>
+          <div class="test-card-role">President, Ariel Investments &middot; Chairwoman, DreamWorks Animation</div>
+        </div>
+        <div class="test-card reveal">
+          <div class="test-card-quote">Diana&rsquo;s work lives at the intersection of radical honesty and somatic intelligence. She has woken me up to patterns I couldn&rsquo;t see, pushing me to my edges so I could find inner peace.</div>
+          <div class="test-card-name">Jane Chen</div>
+          <div class="test-card-role">Founder, Embrace</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <h2>Work with Diana</h2>
+    <p>Ready to explore coaching, an intensive, or a speaking engagement?</p>
+    <a class="btn-primary" href="../connect.html" style="background:rgba(245,242,236,0.15); border:1px solid rgba(245,242,236,0.3)">Get in Touch</a>
+  </div>
+
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="" id="footerLogoImg" alt="Signal Institute">
+          <p>A rigorous training ground for global changemakers ready to trade certainty for aliveness &mdash; and design the future from a place of profound presence.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../offerings.html">Offerings</a></li>
+            <li><a href="../resources.html">Resources</a></li>
+            <li><a href="../connect.html">Connect</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Offerings</h4>
+          <ul>
+            <li><a href="../offerings.html">Signal Forums</a></li>
+            <li><a href="../offerings.html">Intensives</a></li>
+            <li><a href="../offerings.html">1:1 Coaching</a></li>
+            <li><a href="../offerings.html">Group &amp; Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Team</h4>
+          <ul>
+            <li><a href="diana.html">Diana Chapman</a></li>
+            <li><a href="deb-katz.html">Deb Katz</a></li>
+            <li><a href="courtney-smith.html">Courtney Smith</a></li>
+            <li><a href="matt-chapman.html">Matt Chapman</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2026 The Signal Institute. All rights reserved.</div>
+        <div class="footer-tagline">Where disrupters learn to listen.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const LOGO_DARK  = '../assets/images/logo-sage.png';
+    const LOGO_LIGHT = '../assets/images/logo-indigo.png';
+    window.addEventListener('scroll', () => {
+      const s = window.scrollY > 40;
+      document.getElementById('mainNav').classList.toggle('scrolled', s);
+      const n = document.getElementById('navLogoImg');
+      if (n) n.src = LOGO_LIGHT;  // team pages always light bg
+    });
+    function openMob() { document.getElementById('mobMenu').classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeMob() { document.getElementById('mobMenu').classList.remove('open'); document.body.style.overflow=''; }
+    document.addEventListener('DOMContentLoaded', () => {
+      const n = document.getElementById('navLogoImg');
+      const f = document.getElementById('footerLogoImg');
+      if (n) n.src = LOGO_LIGHT;
+      if (f) f.src = LOGO_DARK;
+      // Scroll reveal
+      const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:0.1});
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    });
+  </script>
+</body>
+</html>
